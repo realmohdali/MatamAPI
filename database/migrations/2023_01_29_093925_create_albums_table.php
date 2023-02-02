@@ -16,7 +16,11 @@ class CreateAlbumsTable extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('artist_id')->constrained('artists')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('album_cover')->nullable();
+            $table->foreignId('artist_id')->constrained('artists')->onUpdate('cascade')->onDelete('cascade')->nullable();
+            $table->foreignId('year_id')->constrained('years')->onUpdate('cascade')->onDelete('cascade')->nullable();
+            $table->boolean('featured')->default(false);
+            $table->boolean('new_release')->default(false);
             $table->timestamps();
         });
     }

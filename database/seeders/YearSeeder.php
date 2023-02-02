@@ -15,11 +15,13 @@ class YearSeeder extends Seeder
     public function run()
     {
         $year = new Year();
-        $year->year = "1444";
+        $year->year_ad = "2022";
+        $year->year_hijri = "1444";
         $year->save();
 
         $year = new Year();
-        $year->year = "1443";
+        $year->year_ad = "2021";
+        $year->year_hijri = "1443";
         $year->save();
     }
 }

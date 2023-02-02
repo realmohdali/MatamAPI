@@ -24,7 +24,7 @@ class AlbumController extends Controller
     
     public function artist($artist_id)
     {
-        $albums = Album::select('id', 'name')->where('artist_id', $artist_id)->get();
+        $albums = Album::select('id', 'name', 'album_cover', 'featured', 'new_release')->where('artist_id', $artist_id)->get();
         if (count($albums) > 0) {
             return response()->json(['code' => '200', 'data' => $albums, 'message' => 'List of Albums']);
         } else {
@@ -34,7 +34,7 @@ class AlbumController extends Controller
 
     public function year($year_id)
     {
-        $albums = Album::select('id', 'name')->where('year_id', $year_id)->get();
+        $albums = Album::select('id', 'name', 'album_cover', 'featured', 'new_release')->where('year_id', $year_id)->get();
         if (count($albums) > 0) {
             return response()->json(['code' => '200', 'data' => $albums, 'message' => 'List of Albums']);
         } else {

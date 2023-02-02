@@ -49,7 +49,6 @@ class TrackSeeder extends Seeder
             $track->title = $title[$i];
             $track->artist_id = 1;
             $track->year_id = $years[$i];
-            $track->album_id = $years[$i];
             $track->track_url = $track_url[$i];
             $track->save();
         }

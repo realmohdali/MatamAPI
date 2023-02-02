@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\TrackController;
 use App\Http\Controllers\YearController;
@@ -22,8 +23,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/artists/{name?}', [ArtistController::class, 'index']);
+
 Route::get('/years/{year?}', [YearController::class, 'index']);
+
 Route::get('/tracks/{artist_id}/{year_id}', [TrackController::class, 'index']);
 Route::get('/tracks/{title}', [TrackController::class, 'search']);
 Route::get('/track/list/{id?}', [TrackController::class, 'all']);
 
+Route::get('/albums/artist/{artist_id}', [AlbumController::class, 'artist']);
+Route::get('/albums/year/{year_id}', [AlbumController::class, 'year']);

@@ -11,9 +11,9 @@ class ArtistController extends Controller
     {
         $artists = '';
         if($name == null) {
-            $artists = Artist::select('id', 'name', 'nationality')->get();
+            $artists = Artist::select('id', 'name', 'image', 'nationality')->get();
         } else {
-            $artists = Artist::select('id', 'name', 'nationality')->where('name','like','%'.$name.'%')->get();
+            $artists = Artist::select('id', 'name', 'image', 'nationality')->where('name','like','%'.$name.'%')->get();
         }
         if (count($artists) > 0) {
             return response()->json(['code' => '200', 'data' => $artists, 'message' => 'All Artist List']);

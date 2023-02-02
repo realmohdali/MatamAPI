@@ -19,6 +19,8 @@ class CreateTracksTable extends Migration
             $table->foreignId('artist_id')->constrained('artists')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('year_id')->constrained('years')->onUpdate('cascade')->onDelete('cascade');
             $table->string('track_url');
+            $table->string('trak_image')->nullable();
+            $table->integer('play_count')->default(0);
             $table->timestamps();
         });
     }
