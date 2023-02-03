@@ -11,11 +11,11 @@ class Track extends Model
 
     public function artist()
     {
-        return $this->hasOne('App\Models\Artist', 'id', 'artist_id')->select('id', 'name');
+        return $this->hasOne('App\Models\Artist', 'id', 'artist_id')->select('id', 'name', 'image');
     }
 
     public function year()
     {
-        return $this->hasOne('App\Models\Year', 'id', 'year_id')->select('id', 'year');
+        return $this->hasOne('App\Models\Year', 'id', 'year_id')->select('id', 'year_ad', 'year_hijri');
     }
 }
