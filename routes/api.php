@@ -24,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/artists/{name?}', [ArtistController::class, 'index']);
+Route::get('/artists/get/featured', [ArtistController::class, 'featured']);
 
 Route::get('/years/{year?}', [YearController::class, 'index']);
 
