@@ -19,6 +19,7 @@ class CreateAlbumsTable extends Migration
             $table->string('album_cover')->nullable();
             $table->foreignId('artist_id')->constrained('artists')->onUpdate('cascade')->onDelete('cascade')->nullable();
             $table->foreignId('year_id')->constrained('years')->onUpdate('cascade')->onDelete('cascade')->nullable();
+            $table->integer('release_year')->default(0);
             $table->boolean('featured')->default(false);
             $table->boolean('new_release')->default(false);
             $table->timestamps();

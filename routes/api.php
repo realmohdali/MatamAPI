@@ -34,4 +34,7 @@ Route::get('/track/list/{id?}', [TrackController::class, 'all']);
 Route::get('/albums/artist/{artist_id}', [AlbumController::class, 'artist']);
 Route::get('/albums/year/{year_id}', [AlbumController::class, 'year']);
 
+Route::get('/albums/featured', [AlbumController::class, 'featured']);
+Route::get('/albums/new', [AlbumController::class, 'newRelease']);
+
 Route::get('/albums/album_tracks/{album_id}', [AlbumTrackController::class, 'album_tracks']);
