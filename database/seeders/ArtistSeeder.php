@@ -15,8 +15,8 @@ class ArtistSeeder extends Seeder
     public function run()
     {
         $artist = new Artist();
-        $artist->name = "Nadeem Sarwar";
-        $artist->image = "https://yt3.ggpht.com/ytc/AMLnZu_QJwZnjWAk10Wn9Yhq-xcNth3Pn0TT4WbxwDL3SA=s900-c-k-c0x00ffffff-no-rj";
+        $artist->name = "Farhan Ali";
+        $artist->image = "https://i.imgur.com/MFzbiWG.jpg";
         $artist->nationality = "Pakistani";
         $artist->save();
     }

@@ -15,15 +15,9 @@ class AlbumSedder extends Seeder
     public function run()
     {
         $album = new Album();
-        $album->name = "Hazrat Imam Hussain";
-        $album->artist_id = 1;
+        $album->name = "Sada Rahe Ga Hussain";
+        $album->artist_id = 2;
         $album->year_id = 1;
-        $album->save();
-
-        $album = new Album();
-        $album->name = "Syed Badshah";
-        $album->artist_id = 1;
-        $album->year_id = 2;
         $album->save();
     }
 }

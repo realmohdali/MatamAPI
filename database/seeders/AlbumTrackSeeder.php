@@ -14,14 +14,21 @@ class AlbumTrackSeeder extends Seeder
      */
     public function run()
     {
-        $years = [
-            1, 1, 1, 1, 2, 2, 2, 2, 2, 2
-        ];
+        // $years = [
+        //     1, 1, 1, 1, 2, 2, 2, 2, 2, 2
+        // ];
 
-        for ($i = 0; $i < count($years); $i++) {
+        // for ($i = 0; $i < count($years); $i++) {
+        //     $album_track = new AlbumTrack();
+        //     $album_track->track_id = ($i+1);
+        //     $album_track->album_id = $years[$i];
+        //     $album_track->save();
+        // }
+
+        for($i = 11; $i <= 19; $i++) {
             $album_track = new AlbumTrack();
-            $album_track->track_id = ($i+1);
-            $album_track->album_id = $years[$i];
+            $album_track->track_id = $i;
+            $album_track->album_id = 3;
             $album_track->save();
         }
     }

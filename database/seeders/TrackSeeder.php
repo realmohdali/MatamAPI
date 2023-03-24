@@ -15,36 +15,34 @@ class TrackSeeder extends Seeder
     public function run()
     {
         $title = [
-            "Aey Neher E Alqama",
-            "Alam Bardar",
-            "Chalta Rahe Karwan",
-            "Hazrat Imam Hussain AS",
+            "Abbas Ka Alam Hai",
+            "Gham E Hussain Dilam",
+            "Hussain Tere Lahu Ki Khushbo",
+            "Kaisay Main Dafnaon Sakina",
             "Abbas Ka Nar",
-            "Kya Pata Zindagi Ka",
-            "Main Zainab Hoon (Saraiki)",
-            "Mazar E Fatima",
-            "Syed Badshah",
-            "Zahra Jo Pyaro (Sindhi)"
+            "Saat Qadam",
+            "Sada Rahay Ga Hussain Hussain",
+            "Shaam E Ghareeban Aye",
+            "Ujar Gaye Aj Sani e Zahra",
         ];
 
         $track_url = [
-            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Aey Neher E Alqama.mp3",
-            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Alam Bardar.mp3",
-            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Chalta Rahe Karwan.mp3",
-            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Hazrat Imam Hussain AS.mp3",
+            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Abbas Ka Alam Hai.mp3",
+            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Gham E Hussain Dilam.mp3",
+            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Hussain Tere Lahu Ki Khushbo.mp3",
+            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Kaisay Main Dafnaon Sakina.mp3",
             "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Abbas Ka Nara.mp3",
-            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Kya Pata Zindagi Ka.mp3",
-            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Main Zainab Hoon (Saraiki).mp3",
-            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Mazar E Fatima.mp3",
-            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Syed Badshah.mp3",
-            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Zahra Jo Pyaro (Sindhi).mp3"
+            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Saat Qadam.mp3",
+            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Sada Rahay Ga Hussain Hussain.mp3",
+            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Shaam E Ghareeban Aye.mp3",
+            "matam.syedmohdali.com/matam/nadeem_sarwar/1444/Ujar Gaye Aj Sani e Zahra.mp3",
         ];
 
         $years = [
-            1, 1, 1, 1, 2, 2, 2, 2, 2, 2
+            1, 1, 1, 1, 1, 1, 1, 1, 1
         ];
 
-        for($i = 0; $i < 10; $i++) {
+        for($i = 0; $i < sizeof($title); $i++) {
             $track = new Track();
             $track->title = $title[$i];
             $track->artist_id = 1;
